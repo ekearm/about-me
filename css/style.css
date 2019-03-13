@@ -32,14 +32,25 @@ We will get back to this later
 nav {
     text-align: center;
 }
+
 nav a {
     text-align: center;
     padding:1%;
     margin: 2%;
     font-size: 20px; 
 }
+ul li {
+    display: inline;
+}
 
+ol li{
+    list-style-type: upper-alpha;
+    list-style-position: inside;
+}
 
+input {
+    display:none;
+}
 a:hover {
     color: darkgrey;
     background-color: #000000;
@@ -66,10 +77,11 @@ p{
 
 button {
     margin-top: 2%;
+    display: none;
 }
  button:hover {
      color: darkgrey;
      border-width: 2px;
      background: #000000;
-     cursor: wait;
+     cursor: pointer;
  }
