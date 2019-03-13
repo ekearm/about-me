@@ -71,37 +71,49 @@ else{
         console.log(points);
     }
 }
+
 if(points < 0){
     alert('You will now suffer my wraths!')
     while (living){
-        alert('You find yourself in a room being interagated by a group of mobsters \n They are asking you if you or Jimmy stole took the money.')
+        alert('You find yourself in a room being interagated by 5 of mobsters \n They are asking you if you or Jimmy has the the money.')
         var mobResponse = prompt('Do you A.Blame Jimmy B.Say nothing C.Something Else?')
         mobResponse = mobResponse.toLocaleUpperCase();
 
-        if(mobResponse !== 'B'){
-            alert('Wrong! The mobsters kill you');
+        if(mobResponse === 'C'){
+            alert('The mobsters kill you');
             living = false;
         }
-        else{
-            /*
-            alert('You are now in another room with Rebecca. \n in front of you are five goblets one has poison the other has water.')
-            var max = 4;
-            var poision = Math.floor(Math.random * Math.floor(max) + 1);
-            var rebeccaAlive = true;
-            var rebeccaChioce = Math.floor(Math.random * Math.floor(max) + 1);
-            var goblet = [1,2,3,4,5]
-            console.log(poision);
-            var choice = prompt("Who drinks first? A.You B.Rebbecca");
-            var gobletChoice;
-            choice = choice.toUpperCase();
-            if (choice !== 'A'){
-                while (rebeccaAlive === true && living === true) {
+        else if (mobResponse === 'A'){
+            var money = 10000
+            var myGuess = 3;
+            var missingMoney = Math.floor(Math.random() * Math.floor(money));
+            missingMoney = parseInt(missingMoney);
+            console.log(missingMoney);
+            alert('The mob goes into the other room and kills Jimmy');
+            
+            while (myGuess != 0){
 
+                var moneyResponse = prompt('The mob then asks you how much money is missing 0-10000');
+                parseInt(moneyResponse);
+                
+                if (missingMoney === moneyResponse){
+                    alert("The mob thanks you.");
+                    myGuess = 0;
                 }
+
+                else{
+                    myGuess--;
+                }               
             }
-            else{
-                prompt("")
-            }*/
+
+            if(myGuess === 0){
+                alert("The mob kills you");
+                living = false;
+            }
+        }
+        
+        else{
+            alert('The mob lets you go and you walk out the door. When all of a sudden you ar transported \n to a vacent room with nothing but white space. ')
             alert('You are now confronted by the mighty Cthulhu \n he gives you three choices')
             var deathChoice = prompt('Do you A.Choose to die B.Slowly lose your mind C.Walk away')
             deathChoice = deathChoice.toUpperCase();
@@ -119,11 +131,36 @@ if(points < 0){
             }
         }
     }
-}
- if (living === false){
-     document.location.reload();
- }
 
+    if (living === false){
+        document.location.reload();
+    }
+}
+else{
+    alert("Check the console for your reward");
+
+    var max = 9;
+    var animal= ['dog', 'cat', 'lizard', 'salmon'];
+    var color = ['blue', 'red', 'green', 'salmon'];
+    var vehicles = ['car', 'plane', 'submarine', 'sliegh'];
+    var specChar = [ '$', '@', '!', '+' ];
+    var num1 = Math.floor(Math.random() * Math.floor(max));
+    var num2 = Math.floor(Math.random() * Math.floor(max));
+    var num3 = Math.floor(Math.random() * Math.floor(max));
+    var num4 = Math.floor(Math.random() * Math.floor(max));
+    var randAnimal = animal[Math.floor(Math.random()*animal.length)];
+    var randColor = color[Math.floor(Math.random()*color.length)];
+    var randSpecChar = specChar[Math.floor(Math.random()*specChar.length)];
+    var randVehi = vehicles[Math.floor(Math.random()*vehicles.length)];
+    console.log(randAnimal);
+    console.log(randColor);
+    console.log(randSpecChar);
+    console.log(randVehi);
+    console.log(num1, num2, num3, num4);
+    var password = randColor + randAnimal + randVehi + randSpecChar + num1 + num2 + num3 + num4;
+    console.log('Your random password is: ' + password );
+
+}
 /*function store() {
     var questionOne = document.getElementById('qOne').value.toUpperCase();
     var questionTwo = document.getElementById('qTwo').value.toUpperCase();
