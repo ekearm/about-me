@@ -1,7 +1,9 @@
 'use strict'
 var points = 0;
 var living = true;
+
 alert('I wanna play a game.');
+
 var questionZero = prompt('This is a game for your life. Do you wanna play?');
 questionZero = questionZero.toUpperCase();
 //console.log(questionZero);
