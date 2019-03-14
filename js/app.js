@@ -137,28 +137,7 @@ if(points < 0){
     }
 }
 else{
-    alert("Check the console for your reward");
-
-    var max = 9;
-    var animal= ['dog', 'cat', 'lizard', 'salmon'];
-    var color = ['blue', 'red', 'green', 'salmon'];
-    var vehicles = ['car', 'plane', 'submarine', 'sliegh'];
-    var specChar = [ '$', '@', '!', '+' ];
-    var num1 = Math.floor(Math.random() * Math.floor(max));
-    var num2 = Math.floor(Math.random() * Math.floor(max));
-    var num3 = Math.floor(Math.random() * Math.floor(max));
-    var num4 = Math.floor(Math.random() * Math.floor(max));
-    var randAnimal = animal[Math.floor(Math.random()*animal.length)];
-    var randColor = color[Math.floor(Math.random()*color.length)];
-    var randSpecChar = specChar[Math.floor(Math.random()*specChar.length)];
-    var randVehi = vehicles[Math.floor(Math.random()*vehicles.length)];
-    console.log(randAnimal);
-    console.log(randColor);
-    console.log(randSpecChar);
-    console.log(randVehi);
-    console.log(num1, num2, num3, num4);
-    var password = randColor + randAnimal + randVehi + randSpecChar + num1 + num2 + num3 + num4;
-    console.log('Your random password is: ' + password );
+    alert('Your points are: ' + points );
 
 }
 /*function store() {
