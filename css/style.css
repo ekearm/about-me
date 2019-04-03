@@ -89,5 +89,5 @@ button {
  #quotes{
    display: block;
    font-size: 24px;
-   list-style-type: square;
+   list-style-type: upper-alpha;
  }
