@@ -43,7 +43,7 @@ function questionThree() {
 }
 
 function questionFour() {
-  var answerFour = prompt('Ed has a favorite microbe?').toUpperCase();;
+  var answerFour = prompt('Ed has a favorite microbe?').toUpperCase();
   if(answerFour ==='YES' || answerFour === 'Y'){
     points++;
   } else{
@@ -58,6 +58,46 @@ function questionFive() {
     points++;
   } else{
     points--;
+  }
+  questionSix();
+}
+function questionSix() {
+  var tally = 0;
+  var answerSix = parseInt(prompt('How many animals does Ed have'));
+  while (tally < 3 && answerSix !== 11) {
+    if (answerSix < 11){
+      tally++;
+      answerSix = parseInt(prompt('Sorry that number is to low. Try again.'));
+    }
+    else if (answerSix > 11){
+      answerSix = parseInt(prompt('Sorry that number is to high. Try again.'));
+      tally++;
+      answerSix;
+    }
+  }
+  if(answerSix === 11){
+    points++;
+    alert('Yay!');
+  }
+
+  if (tally === 3){
+    points -= 3;
+  }
+  questionSeven();
+}
+
+function questionSeven(){
+  var firstAlert = alert('Last Question');
+  firstAlert;
+  var colors = ['yellow','orange' , 'brown'];
+  var guess = prompt('Guess one of my favorite colors You get 5 guesses');
+  var guessCount = 0;
+  while (guessCount !== 5 && guess !== colors[0] && guess !== colors[1] && guess !== colors [2]){
+    guessCount++;
+    guess = prompt('Thats wrong try again!');
+  }
+  if (guessCount === 5){
+    points -= 5;
   }
 }
 

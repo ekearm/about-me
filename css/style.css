@@ -39,7 +39,7 @@ nav a {
     margin: 2%;
     font-size: 20px; 
 }
-ul li {
+nav ul li {
     display: inline;
 }
 
@@ -84,4 +84,10 @@ button {
      border-width: 2px;
      background: #000000;
      cursor: pointer;
+ }
+
+ #quotes{
+   display: block;
+   font-size: 24px;
+   list-style-type: square;
  }
